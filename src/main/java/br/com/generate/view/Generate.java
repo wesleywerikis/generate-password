@@ -7,6 +7,15 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Panel;
+import javax.swing.JButton;
+import javax.swing.JSpinner;
+import javax.swing.SpinnerNumberModel;
+import javax.swing.border.LineBorder;
+import javax.swing.JTextField;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import java.awt.Cursor;
+import java.awt.Dimension;
 
 public class Generate {
 
@@ -40,6 +49,8 @@ public class Generate {
 	 */
 	private void initialize() {
 		frameGeneratorPassword = new JFrame();
+		frameGeneratorPassword.getContentPane().setFont(new Font("Tahoma", Font.PLAIN, 13));
+		frameGeneratorPassword.getContentPane().setForeground(new Color(249, 176, 6));
 		frameGeneratorPassword.setTitle("· Generator Password");
 		frameGeneratorPassword.setResizable(false);
 		frameGeneratorPassword.getContentPane().setBackground(new Color(32, 32, 68));
@@ -93,6 +104,34 @@ public class Generate {
 		lblAllRightsReserved.setFont(new Font("Microsoft YaHei", Font.PLAIN, 10));
 		lblAllRightsReserved.setBounds(57, 3, 95, 14);
 		panelGenerator_Copyright.add(lblAllRightsReserved);
+		
+		JPanel panel = new JPanel();
+		panel.setBackground(new Color(32, 32, 68));
+		panel.setBounds(358, 31, 236, 178);
+		frameGeneratorPassword.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		JButton btnGerar = new JButton("Gerar Senha");
+		btnGerar.setBorder(new LineBorder(new Color(249, 176, 6), 2));
+		btnGerar.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnGerar.setFocusable(false);
+		btnGerar.setBackground(new Color(249, 176, 6));
+		btnGerar.setBounds(59, 43, 118, 25);
+		panel.add(btnGerar);
+		
+		JLabel lblNewLabel = new JLabel("ajNkfO@#$");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBorder(new LineBorder(new Color(249, 176, 6), 2));
+		lblNewLabel.setForeground(new Color(255, 255, 255));
+		lblNewLabel.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 14));
+		lblNewLabel.setHorizontalTextPosition(SwingConstants.CENTER);
+		lblNewLabel.setBounds(10, 79, 216, 36);
+		panel.add(lblNewLabel);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBackground(new Color(32, 32, 68));
+		panel_1.setBounds(39, 160, 176, 59);
+		frameGeneratorPassword.getContentPane().add(panel_1);
 		frameGeneratorPassword.setBounds(100, 100, 450, 300);
 		frameGeneratorPassword.setBounds(100, 100, 620, 300);
 		frameGeneratorPassword.setLocationRelativeTo(null);
